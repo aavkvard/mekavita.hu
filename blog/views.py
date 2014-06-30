@@ -13,9 +13,9 @@ class IndexView(generic.ListView):
         return Entry.objects.order_by('-modified')[:10]
 
 
-class DetailView(generic.DetailView):
+class EntryView(generic.DetailView):
     model = Entry
-    template_name = 'blog/detail.html'
+    template_name = 'blog/entry.html'
 
 def index(request):
     latest_entries = Entry.objects.all().order_by('-pub_date')[:5]

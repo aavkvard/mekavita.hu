@@ -1,3 +1,6 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+
 {% if latest_entries %}
     <ul>
     {% for entry in latest_entries %}
