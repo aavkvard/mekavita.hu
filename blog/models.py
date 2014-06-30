@@ -13,5 +13,5 @@ class Entry(models.Model):
         verbose_name_plural = "entries"
  
     def __str__(self):
-        return "%s (%s)" % (self.title, self.author.name)
+        return "%s (%s)" % (self.title, self.author.username)
 
