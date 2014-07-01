@@ -3,5 +3,5 @@
 
 <h1>{{ entry.title }}</h1>
 <h2>{{ entry.author }} - last modified {{ entry.modified }}</h2>
-<p>{{ entry.body|linebreaks }}</p>
+<p>{{ entry.body|safe }}</p>
 
