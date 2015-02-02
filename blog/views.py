@@ -10,7 +10,7 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_entries'
 
     def get_queryset(self):
-        return Entry.objects.order_by('-modified')[:10]
+        return Entry.objects.filter(published__exact=True).order_by('-modified')[:10]
 
 
 class EntryView(generic.DetailView):
